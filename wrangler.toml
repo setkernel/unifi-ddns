@@ -1,5 +1,5 @@
 name = "unifi-cloudflare-ddns"
-main = "src/index.ts"
+main = "src/index.js"
 compatibility_date = "2024-11-12"
 [observability]
 enabled = true
