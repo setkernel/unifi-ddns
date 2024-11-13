@@ -13,7 +13,7 @@ jobs:
     name: Deploy
     strategy:
       matrix:
-        environment: [setkernel, wesi] # List all environments here
+        environment: [setkernel]
     steps:
       - uses: actions/checkout@v4
       - name: Deploy to ${{ matrix.environment }}
