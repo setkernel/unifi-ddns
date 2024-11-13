@@ -11,9 +11,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
+    strategy:
+      matrix:
+        environment: [setkernel, wesi] # List all environments here
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy
+      - name: Deploy to ${{ matrix.environment }}
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
